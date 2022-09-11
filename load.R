@@ -1,6 +1,7 @@
 library(tidyverse)
 library(rvest)
 
+# NB! See setup instructions in `README.md` before running.
 newsletters <- tibble(filename = fs::dir_ls("data/source/h-m-html/", recurse = TRUE, glob = "*.html")) %>%
   mutate(
     id = str_remove(filename, fixed("data/source/h-m-html/")),
